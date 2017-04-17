@@ -1,0 +1,535 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/Javascipt/Jsome#readme">jsome (v2.3.26)</a>
+</h1>
+<h4>Make your JSON look AWESOME!</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsome">module jsome</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.jsome">
+            function <span class="apidocSignatureSpan"></span>jsome
+            <span class="apidocSignatureSpan">(json, callBack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.getColoredString">
+            function <span class="apidocSignatureSpan">jsome.</span>getColoredString
+            <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.parse">
+            function <span class="apidocSignatureSpan">jsome.</span>parse
+            <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.toString">
+            function <span class="apidocSignatureSpan">jsome.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsome.</span>colors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsome.</span>generator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsome.</span>level</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsome.</span>params</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsome.generator">module jsome.generator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.generator.gen">
+            function <span class="apidocSignatureSpan">jsome.generator.</span>gen
+            <span class="apidocSignatureSpan">(json, level, isChild)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.generator.setJsomeRef">
+            function <span class="apidocSignatureSpan">jsome.generator.</span>setJsomeRef
+            <span class="apidocSignatureSpan">(jsome)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsome.getColoredString">module jsome.getColoredString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.getColoredString.getColoredString">
+            function <span class="apidocSignatureSpan">jsome.</span>getColoredString
+            <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsome.parse">module jsome.parse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.parse.parse">
+            function <span class="apidocSignatureSpan">jsome.</span>parse
+            <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsome.toString">module jsome.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsome.toString.toString">
+            function <span class="apidocSignatureSpan">jsome.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsome" id="apidoc.module.jsome">module jsome</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.jsome" id="apidoc.element.jsome.jsome">
+        function <span class="apidocSignatureSpan"></span>jsome
+        <span class="apidocSignatureSpan">(json, callBack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function jsome(json, callBack) {
+  return jsome.parse(stringify(json), callBack);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.getColoredString" id="apidoc.element.jsome.getColoredString">
+        function <span class="apidocSignatureSpan">jsome.</span>getColoredString
+        <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getColoredString = function (jsonString, callBack){
+  var json = JSON.parse(stringify(jsonString));
+  if (!jsome.params.async) {
+    var output = generator.gen(json, jsome.level.start);
+    return output
+  } else {
+    setTimeout(function () {
+      var output = generator.gen(json, jsome.level.start)
+      callBack &amp;&amp; callBack(output);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    , 'async'   : false
+  }
+```
+
+In order to get the colored string without printing it on the console :
+
+```javascript
+   var coloredString = jsome.<span class="apidocCodeKeywordSpan">getColoredString</span>(obj)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.parse" id="apidoc.element.jsome.parse">
+        function <span class="apidocSignatureSpan">jsome.</span>parse
+        <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (jsonString, callBack) {
+  var json = JSON.parse(jsonString);
+
+  if (!jsome.params.async) {
+    var output = generator.gen(json, jsome.level.start);
+    if(Array.isArray(output)) {
+      console.log.apply(console, output);
+    } else {
+      console.log(output);
+    }
+  } else {
+    setTimeout(function () {
+      console.log(generator.gen(json, jsome.level.start));
+      callBack &amp;&amp; callBack();
+    });
+  }
+
+  return json;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+![jsome](https://raw.githubusercontent.com/Javascipt/Jsome/master/examples/example3.png)
+
+
+When you have a json as a string, instead of passing by `JSON.parse` function, you can just call the parse function of jsome
+
+```javascript
+  jsome(JSON.<span class="apidocCodeKeywordSpan">parse</span>('[1,2,3]'));
+```
+
+becomes:
+
+```javascript
+  jsome.parse('[1,2,3]');
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.toString" id="apidoc.element.jsome.toString">
+        function <span class="apidocSignatureSpan">jsome.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsome.generator" id="apidoc.module.jsome.generator">module jsome.generator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.generator.gen" id="apidoc.element.jsome.generator.gen">
+        function <span class="apidocSignatureSpan">jsome.generator.</span>gen
+        <span class="apidocSignatureSpan">(json, level, isChild)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gen = function (json, level, isChild) {
+  var colored = [];
+      level   = level || 0;
+
+  if (isObject(json)) {
+
+    var lastKey = cleanObject(json);
+    colored.push(colorifySpec('{', 'brack', isChild ? 0 : level));
+    level++;
+
+    for(var key in json) {
+      var result = colorifySpec(key, 'attr', level)
+         + colorifySpec(': ', 'punc')
+         + this.gen(json[key], level, true)
+         + (key !== lastKey ? colorifySpec(',', 'punc') : '');
+      colored.push(result);
+    }
+
+    colored.push(colorifySpec('}', 'brack', --level));
+
+  } else if (isArray(json)) {
+    json = cleanArray(json);
+
+    if (hasChild(json)) {
+
+      var result = json.map(function(item) {
+        return this.gen(item, level+1);
+      }.bind(this));
+
+      colored.push(colorifySpec('[', 'brack', isChild ? 0 : level));;
+      colored.push(result.join(colorifySpec(', ', 'punc') + '\n' ));
+      colored.push(colorifySpec(']', 'brack', level));
+
+    } else {
+
+      var coloredArray = colorifySpec('[', 'brack', isChild ? 0 : level);
+      for (var key in json) {
+        coloredArray += colorify(json[key]) + (json.length-1&gt;key ? colorifySpec(', ', 'punc') : '');
+      }
+      colored.push(coloredArray + colorifySpec(']', 'brack'));
+
+    }
+
+  } else {
+    return generateLevel(isChild ? 0 : level) + colorify(json);
+  }
+
+  return isBrowser() ? [colored.join('\n')].concat(browserColors) : colored.join('\n');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var generator = require("./lib/generator").setJsomeRef(jsome)
+, stringify = require('json-stringify-safe');
+
+  jsome.parse = function (jsonString, callBack) {
+var json = JSON.parse(jsonString);
+
+if (!jsome.params.async) {
+  var output = generator.<span class="apidocCodeKeywordSpan">gen</span>(json, jsome.level.start);
+  if(Array.isArray(output)) {
+    console.log.apply(console, output);
+  } else {
+    console.log(output);
+  }
+} else {
+  setTimeout(function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.generator.setJsomeRef" id="apidoc.element.jsome.generator.setJsomeRef">
+        function <span class="apidocSignatureSpan">jsome.generator.</span>setJsomeRef
+        <span class="apidocSignatureSpan">(jsome)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setJsomeRef = function (jsome) {
+  jsomeRef = jsome;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return jsome.parse(stringify(json), callBack);
+  }
+
+  jsome.colors  = colors;
+  jsome.level   = level;
+  jsome.params  = params;
+
+  var generator = require("./lib/generator").<span class="apidocCodeKeywordSpan">setJsomeRef</span>(jsome)
+, stringify = require('json-stringify-safe');
+
+  jsome.parse = function (jsonString, callBack) {
+var json = JSON.parse(jsonString);
+
+if (!jsome.params.async) {
+  var output = generator.gen(json, jsome.level.start);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsome.getColoredString" id="apidoc.module.jsome.getColoredString">module jsome.getColoredString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.getColoredString.getColoredString" id="apidoc.element.jsome.getColoredString.getColoredString">
+        function <span class="apidocSignatureSpan">jsome.</span>getColoredString
+        <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getColoredString = function (jsonString, callBack){
+  var json = JSON.parse(stringify(jsonString));
+  if (!jsome.params.async) {
+    var output = generator.gen(json, jsome.level.start);
+    return output
+  } else {
+    setTimeout(function () {
+      var output = generator.gen(json, jsome.level.start)
+      callBack &amp;&amp; callBack(output);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    , 'async'   : false
+  }
+```
+
+In order to get the colored string without printing it on the console :
+
+```javascript
+   var coloredString = jsome.<span class="apidocCodeKeywordSpan">getColoredString</span>(obj)
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsome.parse" id="apidoc.module.jsome.parse">module jsome.parse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.parse.parse" id="apidoc.element.jsome.parse.parse">
+        function <span class="apidocSignatureSpan">jsome.</span>parse
+        <span class="apidocSignatureSpan">(jsonString, callBack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (jsonString, callBack) {
+  var json = JSON.parse(jsonString);
+
+  if (!jsome.params.async) {
+    var output = generator.gen(json, jsome.level.start);
+    if(Array.isArray(output)) {
+      console.log.apply(console, output);
+    } else {
+      console.log(output);
+    }
+  } else {
+    setTimeout(function () {
+      console.log(generator.gen(json, jsome.level.start));
+      callBack &amp;&amp; callBack();
+    });
+  }
+
+  return json;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+![jsome](https://raw.githubusercontent.com/Javascipt/Jsome/master/examples/example3.png)
+
+
+When you have a json as a string, instead of passing by `JSON.parse` function, you can just call the parse function of jsome
+
+```javascript
+  jsome(JSON.<span class="apidocCodeKeywordSpan">parse</span>('[1,2,3]'));
+```
+
+becomes:
+
+```javascript
+  jsome.parse('[1,2,3]');
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsome.toString" id="apidoc.module.jsome.toString">module jsome.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsome.toString.toString" id="apidoc.element.jsome.toString.toString">
+        function <span class="apidocSignatureSpan">jsome.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
