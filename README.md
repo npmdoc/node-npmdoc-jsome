@@ -1,4 +1,7 @@
-# api documentation for  [jsome (v2.3.26)](https://github.com/Javascipt/Jsome#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsome.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsome) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsome.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsome)
+# npmdoc-jsome
+
+#### basic api documentation for  [jsome (v2.3.26)](https://github.com/Javascipt/Jsome#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsome.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsome) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsome.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsome)
+
 #### Make your JSON look AWESOME!
 
 [![NPM](https://nodei.co/npm/jsome.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/jsome)
