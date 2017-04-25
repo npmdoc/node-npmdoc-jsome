@@ -90,15 +90,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.jsome.toString">
-            function <span class="apidocSignatureSpan">jsome.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsome.</span>colors</span>
 
         </li>
@@ -139,45 +130,6 @@
             <a class="apidocElementLiA" href="#apidoc.element.jsome.generator.setJsomeRef">
             function <span class="apidocSignatureSpan">jsome.generator.</span>setJsomeRef
             <span class="apidocSignatureSpan">(jsome)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.jsome.getColoredString">module jsome.getColoredString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jsome.getColoredString.getColoredString">
-            function <span class="apidocSignatureSpan">jsome.</span>getColoredString
-            <span class="apidocSignatureSpan">(jsonString, callBack)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.jsome.parse">module jsome.parse</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jsome.parse.parse">
-            function <span class="apidocSignatureSpan">jsome.</span>parse
-            <span class="apidocSignatureSpan">(jsonString, callBack)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.jsome.toString">module jsome.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.jsome.toString.toString">
-            function <span class="apidocSignatureSpan">jsome.</span>toString
-            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -282,21 +234,6 @@ becomes:
   jsome.parse(&#x27;[1,2,3]&#x27;);
 ```
 ...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.jsome.toString" id="apidoc.element.jsome.toString">
-        function <span class="apidocSignatureSpan">jsome.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -419,115 +356,6 @@ var json = JSON.parse(jsonString);
 if (!jsome.params.async) {
   var output = generator.gen(json, jsome.level.start);
 ...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jsome.getColoredString" id="apidoc.module.jsome.getColoredString">module jsome.getColoredString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jsome.getColoredString.getColoredString" id="apidoc.element.jsome.getColoredString.getColoredString">
-        function <span class="apidocSignatureSpan">jsome.</span>getColoredString
-        <span class="apidocSignatureSpan">(jsonString, callBack)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">getColoredString = function (jsonString, callBack){
-  var json = JSON.parse(stringify(jsonString));
-  if (!jsome.params.async) {
-    var output = generator.gen(json, jsome.level.start);
-    return output
-  } else {
-    setTimeout(function () {
-      var output = generator.gen(json, jsome.level.start)
-      callBack &#x26;&#x26; callBack(output);
-    });
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    , &#x27;async&#x27;   : false
-  }
-```
-
-In order to get the colored string without printing it on the console :
-
-```javascript
-   var coloredString = jsome.<span class="apidocCodeKeywordSpan">getColoredString</span>(obj)
-```
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jsome.parse" id="apidoc.module.jsome.parse">module jsome.parse</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jsome.parse.parse" id="apidoc.element.jsome.parse.parse">
-        function <span class="apidocSignatureSpan">jsome.</span>parse
-        <span class="apidocSignatureSpan">(jsonString, callBack)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">parse = function (jsonString, callBack) {
-  var json = JSON.parse(jsonString);
-
-  if (!jsome.params.async) {
-    var output = generator.gen(json, jsome.level.start);
-    if(Array.isArray(output)) {
-      console.log.apply(console, output);
-    } else {
-      console.log(output);
-    }
-  } else {
-    setTimeout(function () {
-      console.log(generator.gen(json, jsome.level.start));
-      callBack &#x26;&#x26; callBack();
-    });
-  }
-
-  return json;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-```
-![jsome](https://raw.githubusercontent.com/Javascipt/Jsome/master/examples/example3.png)
-
-
-When you have a json as a string, instead of passing by `JSON.parse` function, you can just call the parse function of jsome
-
-```javascript
-  jsome(JSON.<span class="apidocCodeKeywordSpan">parse</span>(&#x27;[1,2,3]&#x27;));
-```
-
-becomes:
-
-```javascript
-  jsome.parse(&#x27;[1,2,3]&#x27;);
-```
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.jsome.toString" id="apidoc.module.jsome.toString">module jsome.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.jsome.toString.toString" id="apidoc.element.jsome.toString.toString">
-        function <span class="apidocSignatureSpan">jsome.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
